@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/kitap_uygulama_nav"
+    app:startDestination="@id/fragmentKatalog">
+
+    <fragment
+        android:id="@+id/fragmentKatalog"
+        android:name="com.example.mobil_programlama_odev.Activityler.FragmentKatalog"
+        android:label="fragment_katalog"
+        tools:layout="@layout/fragment_katalog" >
+        <action
+            android:id="@+id/action_fragmentKatalog_to_fragmentKitaplar"
+            app:destination="@id/fragmentKitaplar" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentKitaplarim"
+        android:name="com.example.mobil_programlama_odev.Activityler.FragmentKitaplarim"
+        android:label="fragment_kitaplarim"
+        tools:layout="@layout/fragment_kitaplarim" />
+    <fragment
+        android:id="@+id/fragmentProfil"
+        android:name="com.example.mobil_programlama_odev.Activityler.FragmentProfil"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/fragmentKitaplar"
+        android:name="com.example.mobil_programlama_odev.Activityler.FragmentKitaplar"
+        android:label="fragment_kitaplar"
+        tools:layout="@layout/fragment_kitaplar" />
+</navigation>

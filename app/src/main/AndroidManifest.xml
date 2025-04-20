@@ -11,9 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mobil_programlama_odev"
+
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activityler.KitapUygulamaActivity"
+            android:exported="false"
+
+            android:theme="@style/Theme.Mobil_programlama_odev"
+            />
+        <activity
+            android:name=".Activityler.KayitOlActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Mobil_programlama_odev"
+            />
+
+        <activity
+            android:name=".Activityler.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +34,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
     </application>
 
 </manifest>
