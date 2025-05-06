@@ -28,7 +28,7 @@ public class KayitOlActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kayit_ol); // xml dosya ismi
+        setContentView(R.layout.activity_kayit_ol);
 
         etRegisterEmail = findViewById(R.id.etRegisterEmail);
         etRegisterPassword = findViewById(R.id.etRegisterPassword);
@@ -49,6 +49,7 @@ public class KayitOlActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(getApplicationContext(), "Kayıt başarılı, Mailinizi Kontrol Ediniz!", Toast.LENGTH_SHORT).show();
+
                             mailDogrulamaGonder();
 
                         }

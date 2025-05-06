@@ -11,8 +11,8 @@
         android:label="fragment_katalog"
         tools:layout="@layout/fragment_katalog" >
         <action
-            android:id="@+id/action_fragmentKatalog_to_fragmentKitaplar"
-            app:destination="@id/fragmentKitaplar" />
+            android:id="@+id/action_fragmentKatalog_to_fragmentKitapDetay"
+            app:destination="@id/fragmentKitapDetay" />
     </fragment>
     <fragment
         android:id="@+id/fragmentKitaplarim"
@@ -25,8 +25,8 @@
         android:label="fragment_profil"
         tools:layout="@layout/fragment_profil" />
     <fragment
-        android:id="@+id/fragmentKitaplar"
-        android:name="com.example.mobil_programlama_odev.Activityler.FragmentKitaplar"
-        android:label="fragment_kitaplar"
-        tools:layout="@layout/fragment_kitaplar" />
+        android:id="@+id/fragmentKitapDetay"
+        android:name="com.example.mobil_programlama_odev.Activityler.FragmentKitapDetay"
+        android:label="fragment_kitap_detay"
+        tools:layout="@layout/fragment_kitap_detay" />
 </navigation>
