@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "777258684749",
+    "project_id": "mobilodev-66e7c",
+    "storage_bucket": "mobilodev-66e7c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777258684749:android:604c8cda1a3e3a6e7f2704",
+        "android_client_info": {
+          "package_name": "com.example.mobil_programlama_odev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGACc8HARsOrurmqDh68iR6ni_1k0T0lw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
