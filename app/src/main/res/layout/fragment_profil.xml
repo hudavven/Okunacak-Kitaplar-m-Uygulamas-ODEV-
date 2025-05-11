@@ -12,13 +12,13 @@
         android:id="@+id/toolbar"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
-        android:background="#6200EA"
+        android:background="#4CAF50"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="Profil"
-        app:titleTextColor="@android:color/white"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Profil"
+        app:titleTextColor="@android:color/white" />
 
     <!-- Profil Resmi -->
     <ImageView
@@ -28,7 +28,7 @@
         android:layout_marginTop="32dp"
         android:contentDescription="Profil Resmi"
         android:src="@drawable/baseline_account_circle_24"
-        android:tint="#6200EA"
+        android:tint="#BA43F6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
@@ -70,7 +70,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:backgroundTint="#6200EA"
+        android:backgroundTint="#00C853"
         android:text="Kitap Değerlendirmelerine Git"
         android:textAllCaps="false"
         android:textColor="@android:color/white"

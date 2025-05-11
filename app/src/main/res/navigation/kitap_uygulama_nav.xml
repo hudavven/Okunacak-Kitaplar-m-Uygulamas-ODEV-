@@ -23,10 +23,19 @@
         android:id="@+id/fragmentProfil"
         android:name="com.example.mobil_programlama_odev.Activityler.FragmentProfil"
         android:label="fragment_profil"
-        tools:layout="@layout/fragment_profil" />
+        tools:layout="@layout/fragment_profil" >
+        <action
+            android:id="@+id/action_fragmentProfil_to_fragmentKisiDegerlendirme"
+            app:destination="@id/fragmentKisiDegerlendirme" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentKitapDetay"
         android:name="com.example.mobil_programlama_odev.Activityler.FragmentKitapDetay"
         android:label="fragment_kitap_detay"
         tools:layout="@layout/fragment_kitap_detay" />
+    <fragment
+        android:id="@+id/fragmentKisiDegerlendirme"
+        android:name="com.example.mobil_programlama_odev.Activityler.FragmentKisiDegerlendirme"
+        android:label="fragment_kisi_degerlendirme"
+        tools:layout="@layout/fragment_kisi_degerlendirme" />
 </navigation>

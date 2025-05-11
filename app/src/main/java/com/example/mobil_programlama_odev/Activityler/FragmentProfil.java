@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -24,7 +26,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class FragmentProfil extends Fragment {
     private UserViewModel userViewModel;
-
     private TextView emaill,uidd;
     private Toolbar toolbar;
     private Button buttonCıkıs,buttonDegerlendirme;
@@ -47,7 +48,7 @@ public class FragmentProfil extends Fragment {
 
         toolbar = view.findViewById(R.id.toolbar);
         setHasOptionsMenu(true);
-        toolbar.setTitle("Kullanıcı Ara...");
+        toolbar.setTitle("Profilim");
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
 
 
@@ -62,6 +63,17 @@ public class FragmentProfil extends Fragment {
 
                 emaill.setText("Mail : "+mail);
                 uidd.setText("İD : "+uid);
+
+                buttonDegerlendirme.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        NavController navController = Navigation.findNavController(view);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("uid", String.valueOf(uid));
+
+                        navController.navigate(R.id.action_fragmentProfil_to_fragmentKisiDegerlendirme, bundle);
+                    }
+                });
 
             });
         });
@@ -79,13 +91,8 @@ public class FragmentProfil extends Fragment {
         });
 
 
-
-
         return view;
     }
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.menu_arama, menu); // Menü dosyanı bağla
-        super.onCreateOptionsMenu(menu, inflater);
-    }
+
 
 }

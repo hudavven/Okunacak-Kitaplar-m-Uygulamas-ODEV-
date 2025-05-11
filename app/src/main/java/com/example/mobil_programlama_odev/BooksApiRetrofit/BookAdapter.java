@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.navigation.NavController;
@@ -17,8 +18,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mobil_programlama_odev.Activityler.FragmentKitapDetay;
 import com.example.mobil_programlama_odev.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder> {
     private List<BookItem> bookList;
@@ -38,7 +44,6 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             titleText = itemView.findViewById(R.id.bookTitle);
             authorText = itemView.findViewById(R.id.bookAuthor);
             buttonviewDetailsButton = itemView.findViewById(R.id.viewDetailsButton);
-
         }
     }
 
@@ -71,6 +76,10 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             // Navigation action'ını kullanarak geçiş yap
             navController.navigate(R.id.action_fragmentKatalog_to_fragmentKitapDetay, bundle);
         });
+
+
+
+
     }
 
     @Override

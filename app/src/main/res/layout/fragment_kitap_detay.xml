@@ -23,7 +23,7 @@
 
         <Button
             android:id="@+id/addToListButton"
-            android:text="Listeye Ekle"
+            android:text="Okumaya Başla"
             android:textColor="#FFFFFF"
             android:backgroundTint="#4CAF50"
             android:layout_marginBottom="16dp"

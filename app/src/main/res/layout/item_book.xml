@@ -45,15 +45,6 @@
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/addToListButton"
-            android:text="Listeye Ekle"
-            android:layout_marginTop="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#4CAF50" />
-
-        <Button
             android:id="@+id/viewDetailsButton"
             android:text="İncele"
             android:layout_marginTop="8dp"

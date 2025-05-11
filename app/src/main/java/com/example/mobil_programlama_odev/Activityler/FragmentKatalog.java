@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,6 +29,7 @@ import com.example.mobil_programlama_odev.BooksApiRetrofit.BookApiService;
 import com.example.mobil_programlama_odev.BooksApiRetrofit.BookItem;
 import com.example.mobil_programlama_odev.BooksApiRetrofit.BookResponse;
 import com.example.mobil_programlama_odev.BooksApiRetrofit.RetrofitClient;
+import com.example.mobil_programlama_odev.Classlar.UserViewModel;
 import com.example.mobil_programlama_odev.R;
 
 import java.util.List;
@@ -60,6 +63,7 @@ public class FragmentKatalog extends Fragment {
         recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 2));
 
 
+
         return view;
     }
 
@@ -83,18 +87,12 @@ public class FragmentKatalog extends Fragment {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                // Yazı değiştikçe yapılacaklar (canlı filtreleme gibi)
-                performSearch(newText);
+
                 return true;
             }
         });
 
         super.onCreateOptionsMenu(menu, inflater);
-    }
-
-    private void performSearch(String query) {
-        // Burada arama işlemini yap, örneğin RecyclerView filtresi gibi
-        Log.d("Search", "Aranan: " + query);
     }
 
     private void fetchBooks(String query) {
